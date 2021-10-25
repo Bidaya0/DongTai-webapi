@@ -182,17 +182,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'webapi.wsgi.application'
 
-if len(sys.argv) > 1 and sys.argv[1] in ('makemigrations', 'sqlmigrate',
-                                         'migrate') or os.getenv(
-                                             'database', None) == 'sqlite':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-else:
-    DATABASES = {
+#if len(sys.argv) > 1 and sys.argv[1] in ('makemigrations', 'sqlmigrate',
+#                                         'migrate') or os.getenv(
+#                                             'database', None) == 'sqlite':
+#    DATABASES = {
+#        'default': {
+#            'ENGINE': 'django.db.backends.sqlite3',
+#            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        }
+#    }
+#else:
+DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'USER': config.get("mysql", 'user'),

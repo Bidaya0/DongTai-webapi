@@ -1,9 +1,9 @@
 [mysql]
-host = mysql-server
-port = mysql-port
-name = database_name
-user = mysql_username
-password = mysql_password
+host = localhost
+port = 3306
+name = dongtai-webapi
+user = root
+password = dongtai-iast
 
 [redis]
 host = redis_server
